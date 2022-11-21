@@ -1,0 +1,6 @@
+- Web Storage (Localstorage and Session Storage)
+- BOM (Browser Object Model)
+    - window
+    - location
+    - history
+    - naviagtor

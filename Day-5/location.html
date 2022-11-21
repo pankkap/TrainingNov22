@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location Object</title>
+</head>
+<body>
+    <button onclick="redirecPage()">Change location</button>
+    <button onclick="location.reload()">Relaod</button>
+    <script>
+        var url = "./Window.html"
+        function redirecPage()
+        {
+            location.assign(url)
+            // location.replace(url)       // replace will not maintain history
+            location.href = url // similar to assign
+        }
+        console.log(location.hostname);
+        console.log(location.protocol);
+        console.log(location.pathname);
+        console.log(location.port);
+        console.log(location.href);
+    </script>
+</body>
+</html>
+<!-- location.assign()
+location.replace()
+location.href -->

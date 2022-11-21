@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigator for Network Identification</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <span id="network"></span>
+    <span class="material-icons"></span>
+    <script>
+      window.onload = () => {
+        setInterval(() => {
+          if (navigator.onLine) {
+            onlineStatus();
+          } else {
+            offlineStatus();
+          }
+        }, 500);
+      };
+
+      function onlineStatus() {
+        console.log("You are connected to Network");
+        document.getElementById('network').innerHTML = "Online"
+        document.querySelector('.material-icons').textContent="wifi"
+        document.querySelector('.material-icons').style.color = "green"
+        document.querySelector('.material-icons').style.fontSize = "50px"
+      }
+
+      function offlineStatus() {
+        console.log("You are not connected to Network");
+        document.getElementById('network').innerHTML = "Offline"
+        document.querySelector('.material-icons').textContent="wifi_off"
+        document.querySelector('.material-icons').style.color = "red"
+        document.querySelector('.material-icons').style.fontSize = "50px"
+      }
+
+      console.log("Window-Height "+window.innerHeight);
+      console.log("Window-Width "+window.innerWidth);
+      
+      console.log("Content Width: "+document.body.clientWidth);
+      console.log("Content height: "+document.body.clientHeight);
+      
+      console.log("Screen Width: "+screen.width);
+      console.log("Screen height: "+screen.height);
+
+    </script>
+  </body>
+</html>
+
+
+<!-- Screen Sizes:  -->
+<!-- 
+
+-->

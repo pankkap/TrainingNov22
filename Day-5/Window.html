@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Object</title>
+  </head>
+  <body>
+    <p><button onclick="openWin()">Create a window</button></p>
+    <p><button onclick="moveWinTo()">Move the window to 150 150</button></p>
+    <p><button onclick="moveWinBy()">Move the window by 75 75</button></p>
+    
+    
+    <script>
+      let myWindow;
+
+      function openWin() {
+        myWindow = window.open("", "", "width=400, height=400");
+      }
+
+      function moveWinTo() {
+        myWindow.moveTo(150, 150);
+      }
+
+      function moveWinBy() {
+        myWindow.moveBy(75, 75);
+      }
+
+      setTimeout(() => {
+        myWindow.close()
+      }, 3000);
+    </script>
+  </body>
+</html>

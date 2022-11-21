@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+    <h2>Web Storage</h2>
+    <h3>Local Storage | Session Storage</h3>
+
+    <div>
+        <label for="">User Name: </label>
+        <Input type="text" id="uname"></Input>
+    </div>
+    
+    <div>
+        <label for="">Password: </label>
+        <Input type="password" id="pwd"></Input>
+    </div>
+    <br>
+   <div id="container">
+
+   </div>
+    <br><br>
+    <button>Store Data</button>
+    <button>Remove Data</button>
+    
+    <script>
+
+     // References
+        var input = document.getElementById('uname')
+        var input1 = document.getElementById('pwd')
+        var container = document.getElementById('container')
+
+        var output = document.createElement('p')
+        output.setAttribute("id","output")
+        document.body.appendChild(output)
+       
+
+
+        // var output =  document.getElementById('output')
+        
+        let btn = document.querySelector('button')
+        btn.onclick = ()=>{
+        
+            var data = {
+                uname:input.value,
+                pwd:input1.value,
+            }
+
+            console.log(data);
+            localStorage.setItem("name", JSON.stringify(data))
+            location.reload();
+
+        }
+        document.querySelectorAll('button')[1].onclick = ()=>{
+            localStorage.removeItem('name')
+            location.reload();
+        }
+        var data = JSON.parse( localStorage.getItem('name'))
+        if(data!=null)
+        output.innerHTML = "Data: " + data.uname + " " + data.pwd 
+        else
+        {
+        output.innerHTML = "Data: No Data available";
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- window.localStorage.setItem(key, value)
+window.localStorage.getItem(key)
+
+window.sessionStorage.setItem(key, value)
+window.sessionStorage.getItem(key) -->
+
+
+
+
+
