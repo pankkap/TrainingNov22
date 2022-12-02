@@ -1,0 +1,20 @@
+Typescript Part-1
+
+- Introduction to Typescript
+- Setting up environment for typescript
+	npm i -g typescript
+- compilation and execution
+	tsc --init
+- basic types
+- array and Objects
+- Explicit Notations
+- typescript configuration 
+
+
+Typescript Part-2
+- functions
+- type Alias
+- casting
+- DOM Manipulation
+- Class, Objects
+- Inheritance, abstrct class
